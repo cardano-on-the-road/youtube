@@ -237,6 +237,7 @@ cardano-cli transaction submit --tx-file matx.signed --testnet-magic $magicnumbe
 cardano-cli transaction submit --tx-file matx.signed --mainnet
 ```
 
+[How to ming NFTs](nft_minting)
 
 ## Special thanks to this tutorial 
 [ADA MakerSpace](https://www.youtube.com/watch?v=rhAgBLJnwP0)
