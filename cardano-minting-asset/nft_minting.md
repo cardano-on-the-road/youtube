@@ -164,7 +164,7 @@ cardano-cli transaction build \
  --tx-in $txhash#$txix \
  --tx-out $address+$output+"$tokenamount $policyid.$tokenname" \
  --change-address $address \
- --mint="-$tokenamount $policyid.$tokenname" \
+ --mint="$tokenamount $policyid.$tokenname" \
  --minting-script-file policy/policy.script \
  --metadata-json-file metadata.json  \
  --invalid-hereafter $slotnumber \
