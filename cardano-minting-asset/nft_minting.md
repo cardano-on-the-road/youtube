@@ -112,17 +112,17 @@ cardano-cli query utxo --address $(< payment.addr) --mainnet
 
 ## Variables definitions
 ```bash
-export txhash="9a326db1e2c65b56bbfd76014acaf727f783ed251e1d986c12deb7fe4302b447"
-export txix=0
+export txhash=[UTXO HASH]
+export txix=[YTXO IX]
 export funds="5000000"
 export policyid=$(cat policy/policyID)
-export tokenname="ENSO"
+export tokenname=[Token name]
 export tokenamount="100000000"
 export fee="0"
 export output="0"
-export slotnumber=$(cardano-cli query tip --mainnet | jq .slot)
-export address=addr1qyryskes59f2mwqtzes6mpwtc6lj48l4q3ft08gxmvtnjfadzyzjrxf4d47e00rnwmjmlrkx95czvwa369spk72cvwtqp53adl
-export ipfs_hash="QmPRayXKgC4zX8L3NXpX3nZVgtMPj4SnWHVbkwdjMb64t2"
+export slotnumber=[The same value of the before property in policy.script]
+export address=[Wallet Address]
+export ipfs_hash=[IPFS LINK]
 ```
 
 ## Metadata file
@@ -171,7 +171,6 @@ cardano-cli transaction build \
  --witness-override 2 \
  --out-file matx.raw
 
-export fee=$(cardano-cli transaction calculate-min-fee --tx-body-file matx.raw --tx-in-count 1 --tx-out-count 1 --witness-count 1 --mainnet --protocol-params-file protocol.json | cut -d " " -f1)
 ```
 
 ## Sign
