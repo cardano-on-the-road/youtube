@@ -144,6 +144,18 @@ echo "  }" >> metadata.json
 echo "}" >> metadata.json
 ```
 
+## Variable verification
+```bash
+ echo $fee
+ echo $address
+ echo $output
+ echo $tokenamount
+ echo $policyid
+ echo $tokenname
+ echo $slotnumber
+ echo $script
+```
+
 ## Raw transaction
 ```bash
 cardano-cli transaction build \
