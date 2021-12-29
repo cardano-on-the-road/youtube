@@ -27,7 +27,7 @@ def linear_regression_model(Y):
     return (lm.intercept_, lm.coef_)
 
 def linear_regression_prediction(model, acc, n):
-    if n >= 0:
+    if n > 0:
         return [model[0] + model[1][0] * acc] + linear_regression_prediction(model, acc+1, n-1)
     else:
         return []
