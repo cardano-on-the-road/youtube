@@ -9,9 +9,9 @@ Created on Tue Dec 28 10:19:51 2021
 import pandas_datareader.data as web
 import datetime
 import requests
-import yfinance as yf
 
 class Wacc:   
+    
     def __init__(self, secretkey, start=None, end=None):
         self.secretkey=secretkey
         if start == None:
@@ -84,7 +84,6 @@ class Wacc:
         #Rating is D
         credit_spread = 0.1512
       cost_of_debt = RF + credit_spread
-      print(cost_of_debt)
       return cost_of_debt
 
 
@@ -106,16 +105,24 @@ class Wacc:
     def calc_wacc(self, company):
       FR = requests.get(f'https://financialmodelingprep.com/api/v3/ratios/{company}?apikey={self.secretkey}').json()
       ETR = FR[0]['effectiveTaxRate'] 
+      
       BS = requests.get(f'https://financialmodelingprep.com/api/v3/balance-sheet-statement/{company}?&apikey={self.secretkey}').json()
       Debt_to = BS[0]['totalDebt'] / (BS[0]['totalDebt'] + BS[0]['totalStockholdersEquity'])
       equity_to = BS[0]['totalStockholdersEquity'] / (BS[0]['totalDebt'] + BS[0]['totalStockholdersEquity'])
+      
+      ke = self.costofequity(company)
+      
+      ICRF=self.interest_coveraga_and_RF(company)
+      RF = ICRF[0]
+      interest_coverage_ratio = ICRF[1]
+      kd = self.cost_of_debt(company, RF, interest_coverage_ratio)
+      
       WACC = (kd*(1-ETR)*Debt_to) + (ke*equity_to)
       return WACC
 
 
 
 
-#Interest coverage ratio = EBIT / interest expenses
 
 
 
