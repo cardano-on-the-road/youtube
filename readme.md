@@ -1,6 +1,6 @@
 # Youtube repository
 
-Every folder of this repository represents a video on my Youtube channel.
+Every folder of this repository is related to a video on my Youtube channel.
 
 |Youtube Video |Github folder| Short description |   
 |---|---|---|
