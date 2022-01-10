@@ -33,8 +33,6 @@ def linear_regression_prediction(model, acc, n):
         return []
 
 def dcf_calc(pred, wacc, n, multiplier = 1):
-    if n>1 and multiplier > 1:
-        return (pred[n-1] / pow(1 + wacc, n)) * multiplier + dcf_calc(pred, wacc, n-1, multiplier=1)
     if n>1:
         return (pred[n-1] / pow(1 + wacc, n)) * multiplier + dcf_calc(pred, wacc, n-1, multiplier=1)
     if n == 1:

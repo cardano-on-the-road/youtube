@@ -97,7 +97,8 @@ class Wacc:
       SP500 = web.DataReader(['sp500'], 'fred', self.start, self.end)
       #Drop all Not a number values using drop method.
       SP500.dropna(inplace = True)
-      SP500yearlyreturn = (SP500['sp500'].iloc[-1]/ SP500['sp500'].iloc[-252])-1      
+      SP500yearlyreturn = (SP500['sp500'].iloc[-1]/ SP500['sp500'].iloc[-252])-1   
+      #CAPM Formula   
       cost_of_equity = RF+(beta*(SP500yearlyreturn - RF))
       return cost_of_equity
 
