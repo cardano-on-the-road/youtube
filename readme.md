@@ -4,6 +4,7 @@ Every folder of this repository is related to a video on my Youtube channel.
 
 |Youtube Video |Github folder| Short description |   
 |---|---|---|
+|[Vuoi perdere tempo analizzando i dati macro-economici?!](https://youtu.be/QzqwRmNAxXU)|[macro-economy-data](./macro-economy-data/)|A tool to get updated data about American Economy|
 |[Come eseguire il minting di NFT su Cardano](https://www.youtube.com/watch?v=ftLjwy-TpTQ)|[cardano-minting-asset](./cardano-minting-asset/nft_minting.md)| How to mint NFTs on top of Cardano blockchain|
 |[Come generare i propri token su blockchain Cardano](https://www.youtube.com/watch?v=uWJsBZ47rco)|[cardano-minintg-asset](./cardano-minting-asset/README.md)| How to mint tokens on top of Cardano blockchain|
 |[Come ordinare automaticamente le cartelle del proprio pc](https://www.youtube.com/watch?v=IZ-vs6frPbs)|[sortingbot](https://github.com/cardano-on-the-road/sortingbot)| How to automatically sort folders and files on your PC|
