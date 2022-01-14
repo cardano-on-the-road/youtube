@@ -42,7 +42,7 @@ class stocks_report:
         return report
     
     def add_fundamental_data(self, df):
-        ratios = ['trailingPE','marketCap', 'forwardEps', 'trailingEps', 'bookValue', 'priceToBook', 'pegRatio', 'sector', 'industry']
+        ratios = ['trailingPE','marketCap', 'forwardEps', 'trailingEps', 'bookValue', 'priceToBook', 'pegRatio', 'sector', 'industry', 'targetLowPrice','targetMeanPrice','targetHighPrice','recommendationMean', 'recommendationKey']
         new_df = df.reindex(columns = df.columns.tolist() + ratios)
         for row_index in new_df.index:
             try:
