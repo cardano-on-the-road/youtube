@@ -1,6 +1,0 @@
-id=5 name='marco' age=200
-SELECT persons.id AS persons_id, persons.name AS persons_name, persons.age AS persons_age 
-FROM persons
-[<main.PersonDb object at 0x105e22460>, <main.PersonDb object at 0x105e22400>, <main.PersonDb object at 0x105e224c0>]
-id=3 name='matteo' age=200
-[<main.PersonDb object at 0x105f2bdf0>, <main.PersonDb object at 0x105f2bd60>, <main.PersonDb object at 0x105f2bee0>, <main.PersonDb object at 0x105f2bfa0>]
