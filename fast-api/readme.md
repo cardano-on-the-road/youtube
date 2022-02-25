@@ -12,6 +12,7 @@ python3 -m venv fastenv
 
 ```
 pip install "fastapi[all]"
+pip install "uvicorn[standard]"
 uvicorn main:app --reload  
 ```
 
